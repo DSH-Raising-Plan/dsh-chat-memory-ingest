@@ -1,0 +1,62 @@
+{
+  "name": "dsh-chat-memory-ingest",
+  "version": "0.1.0",
+  "description": "编排微信/QQ 已导出聊天记录并录入 cognitive-memory（主人/他人分流）。不读私有加密库；工具目录路径引用。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "wechat",
+    "qq",
+    "memory",
+    "cognitive-memory",
+    "chat-import"
+  ],
+  "homepage": "https://github.com/DSH-Raising-Plan/dsh-chat-memory-ingest#readme",
+  "bugs": {
+    "url": "https://github.com/DSH-Raising-Plan/dsh-chat-memory-ingest/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DSH-Raising-Plan/dsh-chat-memory-ingest.git"
+  },
+  "author": "canyueY",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./tool-spec": "./src/tool-spec.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "python",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check src/tool-spec.js && node --check src/python-runner.js"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.1.0-rc.7"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "AGPL-3.0-or-later"
+}

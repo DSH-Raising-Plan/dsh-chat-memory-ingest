@@ -1,0 +1,13 @@
+{
+  "id": "dsh-chat-memory-ingest",
+  "name": "Chat Memory Ingest",
+  "description": "Sync WeChat/QQ exported chats into cognitive-memory (owner/peer split).",
+  "tools": [
+    "im_status",
+    "im_sync_wechat",
+    "im_sync_qq",
+    "im_preview",
+    "im_import",
+    "im_digest_wechat"
+  ]
+}
